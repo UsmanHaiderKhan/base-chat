@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {ChatMessageModel} from './model/chat-message.model';
-// @ts-ignore
 import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Observable} from 'rxjs';
@@ -23,7 +22,7 @@ export class ChatService {
   }
 
 
-  sendMessage(msg: string) {
+  sendMessage(msg: string): void {
     const timestamp = this.getTimeStamp();
     // const email = this.user.email;
     const email = 'test@gmail.com';
@@ -39,15 +38,16 @@ export class ChatService {
     console.log('Send Message');
   }
 
-  getMessages() {
+  getMessages(): AngularFireList<ChatMessageModel> {
+    debugger;
     return this.db.list('messages');
   }
 
-
-  getTimeStamp() {
+  getTimeStamp(): any {
     const now = new Date();
     const date = now.getUTCFullYear() + '/' + (now.getUTCMonth()) + '/' + now.getUTCDate();
     const time = now.getUTCHours() + '/' + +(now.getUTCMinutes()) + '/' + now.getUTCSeconds();
     return (date + ' ' + time);
   }
+
 }
