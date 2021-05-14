@@ -1,0 +1,26 @@
+<div [hidden]="user" class="container mt-4">
+  <!--  <h4>SignIn With Phone Number</h4>-->
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <label for="">PhoneNumber</label>
+      <input type="text" [(ngModel)]="el64Number" placeholder="+92" class="form-control">
+      <div>
+        <div id="recaptcha-container"></div>
+        <button class="btn btn-primary" (click)="sendLoginCode()">Send Login Code</button>
+      </div>
+    </div>
+
+
+    <div *ngIf="windowRef.confirmationResult">
+      <label for="">Enter Confirmation Code</label>
+      <input type="text" [(ngModel)]="verificationCode" placeholder="9876" class="form-control">
+
+      <button class="btn btn-primary" (click)="verifyLoginCode()">Verify</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="user">
+    <h2>SuccessFully Verify Your Number</h2>
+    UserId: {{user?.id}}
+  </div>
