@@ -1,6 +1,8 @@
 <div class="navBar">
   <div id="logo"></div>
-  <div id="heading"><a routerLink="/"></a></div>
+  <div id="heading"><a routerLink="/"></a>
+    <div><h4 style="text-align: center">Base Chat App</h4></div>
+  </div>
   <div class="links">
     <span>
       <a *ngIf="!(user|async)?.uid" href="#" (click)="login()">Login</a>

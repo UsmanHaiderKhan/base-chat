@@ -15,12 +15,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {appRoutes} from '../routes';
 import {AuthService} from './auth.service';
 import {ChatService} from './chat.service';
-import { NavbarComponent } from './navbar/navbar.component';
+import {WindowService} from './services/windowService';
+import {NavbarComponent} from './navbar/navbar.component';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {PhoneVerificationComponent} from './phone-verification/phone-verification.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
     SignupComponent,
     UserListComponent,
     UserItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    PhoneVerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
-  providers: [AuthService, ChatService],
+  providers: [AuthService, ChatService, WindowService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
