@@ -19,9 +19,11 @@ export class PhoneVerificationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    firebase.auth().languageCode = 'it';
     this.windowRef = this.window.WindowRef;
     this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
     this.windowRef.recaptchaVerifier.render();
+
   }
 
   sendLoginCode() {

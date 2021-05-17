@@ -4,16 +4,19 @@
 
 export const environment = {
   production: false,
+
   firebase: {
-    apiKey: 'AIzaSyBdHyzxSS-pEw4UQ0T-0NMh6rkjDCsZiQQ',
-    authDomain: 'base-chat-aa38c.firebaseapp.com',
-    projectId: 'base-chat-aa38c',
-    storageBucket: 'base-chat-aa38c.appspot.com',
-    messagingSenderId: '188861321944',
-    appId: '1:188861321944:web:4ca5c7a87ef1747fe13dad',
-    measurementId: 'G-R757WLCNNY'
+    apiKey: 'AIzaSyD7lldPSJJCzHWjIM0CrAaq_9kRMijxk4Y',
+    authDomain: 'basechat-6190b.firebaseapp.com',
+    projectId: 'basechat-6190b',
+    storageBucket: 'basechat-6190b.appspot.com',
+    messagingSenderId: '290516939183',
+    appId: '1:290516939183:web:7739bad6da48f44ebb3f5a',
+    measurementId: 'G-BW3HP71K48'
+
   }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
