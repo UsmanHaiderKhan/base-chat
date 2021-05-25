@@ -1,5 +1,7 @@
 <div [hidden]="user" class="container mt-4">
   <!--  <h4>SignIn With Phone Number</h4>-->
+
+
   <div class="row justify-content-center">
     <div class="col-md-6">
       <label for="">PhoneNumber</label>
@@ -18,9 +20,11 @@
       <button class="btn btn-primary" (click)="verifyLoginCode()">Verify</button>
     </div>
 
+    <div *ngIf="user">
+      <h2>SuccessFully Verify Your Number</h2>
+      UserId: {{user?.id}}
+    </div>
   </div>
 
-  <div *ngIf="user">
-    <h2>SuccessFully Verify Your Number</h2>
-    UserId: {{user?.id}}
-  </div>
+
+

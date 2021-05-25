@@ -15,6 +15,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {appRoutes} from '../routes';
 import {AuthService} from './auth.service';
 import {ChatService} from './chat.service';
+// @ts-ignore
 import {WindowService} from './services/windowService';
 import {NavbarComponent} from './navbar/navbar.component';
 import {environment} from '../environments/environment';

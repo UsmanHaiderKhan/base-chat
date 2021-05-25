@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {WindowService} from '../services/windowService';
 import firebase from 'firebase';
+import {WindowService} from '../services/windowService';
 
 
 @Component({
